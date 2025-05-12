@@ -30,8 +30,7 @@ cd lab-s3-condiciones
 git init
 ```
 
-📸 `screenshots/00-inicializacion-repositorio-git.png`
-
+![Paso 0 - Inicialización del repositorio Git](screenshots/00-inicializacion-repositorio-git.png)
 ---
 
 ### Paso 1: Crear bucket S3
@@ -44,8 +43,8 @@ aws s3api create-bucket \
   --profile labuser
 ```
 
-📸 `screenshots/01-crear-bucket.png`  
-📸 `screenshots/02-bucket-creado.png`
+![Paso 1 - Crear bucket](screenshots/01-crear-bucket.png)
+![Paso 1 - Bucket creado](screenshots/02-bucket-creado.png)
 
 ---
 
@@ -68,7 +67,7 @@ Se crea el archivo `bucket-policy-ip.json` con la siguiente política:
       ],
       "Condition": {
         "NotIpAddress": {
-          "aws:SourceIp": "TU.IP.PUBLICA/32"
+          "aws:SourceIp": "IP/32"
         }
       }
     }
@@ -76,7 +75,7 @@ Se crea el archivo `bucket-policy-ip.json` con la siguiente política:
 }
 ```
 
-📸 `screenshots/03-crear-politica.png`
+![Paso 2 - Crear política](screenshots/03-crear-politica.png)
 
 ---
 
@@ -89,7 +88,7 @@ aws s3api put-bucket-policy \
   --profile labuser
 ```
 
-📸 `screenshots/04-politica-aplicada.png`
+![Paso 3 - Política aplicada](screenshots/04-politica-aplicada.png)
 
 ---
 
@@ -99,7 +98,7 @@ aws s3api put-bucket-policy \
 aws s3 ls s3://s3-condiciones-lab-sebastian --profile labuser
 ```
 
-📸 `screenshots/05-validar-acceso.png`
+![Paso 4 - Validar acceso permitido](screenshots/05-validar-acceso.png)
 
 ---
 
@@ -111,7 +110,7 @@ Se modifica el archivo `bucket-policy-ip.json` para permitir una IP falsa (simul
 "aws:SourceIp": "8.8.8.8/32"
 ```
 
-📸 `screenshots/06-cambiar-ip.png`
+![Paso 5 - Cambiar IP en política](screenshots/06-cambiar-ip.png)
 
 ---
 
@@ -121,7 +120,7 @@ Se modifica el archivo `bucket-policy-ip.json` para permitir una IP falsa (simul
 aws s3 ls s3://s3-condiciones-lab-sebastian --profile labuser
 ```
 
-📸 `screenshots/07-acceso-denegado.png`
+![Paso 6 - Validar acceso denegado](screenshots/07-acceso-denegado.png)
 
 ---
 
