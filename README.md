@@ -12,14 +12,6 @@ Este laboratorio demuestra cómo aplicar una política de control de acceso a un
 
 ---
 
-## 🧪 Requisitos
-
-- AWS CLI configurado.
-- Un perfil IAM con permisos para administrar S3 (`labuser` en este caso).
-- Git (para documentación del laboratorio).
-
----
-
 ## 🗂️ Estructura del laboratorio
 
 ### Paso 0: Inicialización del repositorio Git
