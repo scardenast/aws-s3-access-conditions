@@ -1,0 +1,20 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DenyAccessExceptMyIP",
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": "s3:*",
+      "Resource": [
+        "arn:aws:s3:::s3-condiciones-lab-sebastian",
+        "arn:aws:s3:::s3-condiciones-lab-sebastian/*"
+      ],
+      "Condition": {
+        "NotIpAddress": {
+          "aws:SourceIp": "1.1.1.1/32"
+        }
+      }
+    }
+  ]
+}
