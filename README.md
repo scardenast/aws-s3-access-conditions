@@ -107,7 +107,7 @@ aws s3 ls s3://s3-condiciones-lab-sebastian --profile labuser
 Se modifica el archivo `bucket-policy-ip.json` para permitir una IP falsa (simulación de IP no autorizada):
 
 ```json
-"aws:SourceIp": "8.8.8.8/32"
+"aws:SourceIp": "1.1.1.1/32"
 ```
 
 ![Paso 5 - Cambiar IP en política](screenshots/06-cambiar-ip.png)
