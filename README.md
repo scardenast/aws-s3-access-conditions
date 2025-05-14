@@ -1,10 +1,10 @@
-# 🛡️ Laboratorio: Control de acceso a bucket S3 por IP
+# Laboratorio de control de acceso a bucket S3 por IP
 
-Este laboratorio demuestra cómo aplicar una política de control de acceso a un bucket de Amazon S3 basada en condiciones específicas, en este caso por dirección IP. Se documentan tanto accesos permitidos como denegados, y se valida la efectividad de las políticas de seguridad aplicadas.
+Este laboratorio trata sobre restringir el acceso a un bucket de S3 usando condiciones basadas en la dirección IP del cliente. Se probó una política que permite solicitudes solo desde una IP específica y bloquea el resto. Se verificaron ambos casos —permitido y denegado— para confirmar que la regla funciona como se espera y que el control realmente se está aplicando.
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
 - Crear un bucket S3.
 - Aplicar una política que solo permita acceso desde una IP específica.
@@ -12,7 +12,7 @@ Este laboratorio demuestra cómo aplicar una política de control de acceso a un
 
 ---
 
-## 🗂️ Estructura del laboratorio
+## Estructura del laboratorio
 
 ### Paso 0: Inicialización del repositorio Git
 
@@ -116,6 +116,4 @@ aws s3 ls s3://s3-condiciones-lab-sebastian --profile labuser
 
 ---
 
-## ✅ Conclusión
-
-Este laboratorio demostró cómo utilizar políticas con condiciones en S3 para permitir o denegar acceso dinámicamente según la IP del cliente. Estas medidas son clave para limitar el acceso a datos sensibles en la nube.
+Contacto: sebastian.cardenas.t@gmail.com
